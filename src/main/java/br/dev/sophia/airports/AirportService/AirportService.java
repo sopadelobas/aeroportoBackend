@@ -13,7 +13,8 @@ public class AirportService {
     private AirportRepository airportRepository;
 
     public List<Airport> findAll() {
-    List<Airport> result = airportRepository.findAll();
-    return result;
-}
+        List<Airport> result = airportRepository.findAll();
+        return result;
+
+    }
 }
