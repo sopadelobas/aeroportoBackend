@@ -16,7 +16,6 @@ public class AirportService {
     public List<Airport> findAll() {
         List<Airport> result = airportRepository.findAll();
         return result;
-
     }
 
     public List<Airport> findByCity(String city) {
@@ -30,5 +29,10 @@ public class AirportService {
         List<AirportMinDTO> resultDTO= resultAirport.stream().map(x -> new AirportMinDTO(x)).toList();
         
         return resultDTO;
+    }
+    
+    public Airport findByIataCode(String iataCode) {
+        Airport result = airportRepository.findByIataCode(iataCode);
+        return result;
     }
 }
